@@ -25,7 +25,6 @@ setuptools.setup(
         'matplotlib',
         'opencv-python',
         'tabulate',
-        'argparser>=1.4.0'
     ],
     python_requires='>=3',
 )
