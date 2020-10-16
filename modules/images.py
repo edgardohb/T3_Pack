@@ -52,17 +52,17 @@ def Presentador_de_imágenes(archivo, escala):
 
 #Presentador_de_imágenes(r"C:\Users\edghb\Pictures\Saved Pictures\space-walk-nasa-796x457",2)
 
+def main():
+    parser = argparse.ArgumentParser(description = 'Presenta una imagen')
+    parser.add_argument('escala' , type = int, help = 'Ingrese un entero para la Escala 1: para escala 1:1, 2: para escala 1:2 , 3: para escala 2:1')
+    parser.add_argument('archivo', type = str, help = 'Ingrese el Nombre de la imagen')
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('-t', '--time', action= 'store_true', help= 'Muestra tiempo de ejecución')
+    args = parser.parse_args()
 
-parser = argparse.ArgumentParser(description = 'Presenta una imagen')
-parser.add_argument('escala' , type = int, help = 'Ingrese un entero para la Escala 1: para escala 1:1, 2: para escala 1:2 , 3: para escala 2:1')
-parser.add_argument('archivo', type = str, help = 'Ingrese el Nombre de la imagen')
-group = parser.add_mutually_exclusive_group()
-group.add_argument('-t', '--time', action= 'store_true', help= 'Muestra tiempo de ejecución')
-args = parser.parse_args()
+    t0= time.time()
+    Presentador_de_imágenes(args.archivo,args.escala)
+    t1= time.time() - t0
 
-t0= time.time()
-Presentador_de_imágenes(args.archivo,args.escala)
-t1= time.time() - t0
-
-if args.time:
-    print ('Tiempo de ejecución: ', round(t1, 6), 'segundos.') 
+    if args.time:
+        print ('Tiempo de ejecución: ', round(t1, 6), 'segundos.') 
