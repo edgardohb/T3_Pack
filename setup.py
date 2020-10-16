@@ -12,8 +12,8 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/edgardohb/T3_Pack.git",
-    packages=setuptools.find_packages(),
     package_dir= {'T3_Pack':'modules'},
+    packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
@@ -24,7 +24,8 @@ setuptools.setup(
         'playsound',
         'matplotlib',
         'opencv-python',
-        'tabulate'
+        'tabulate',
+        'argparser>=1.4.0'
     ],
     python_requires='>=3',
 )
