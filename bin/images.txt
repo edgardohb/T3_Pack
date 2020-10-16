@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+
+from modules.images import Presentador_de_imágenes
+
+Presentador_de_imágenes()

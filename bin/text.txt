@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+
+from modules.text import text_analyzer
+
+text_analyzer()
