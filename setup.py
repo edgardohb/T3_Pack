@@ -19,7 +19,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    scripts =['bin/sound', 'bin/text','modules/images.py'],
+    scripts =['bin/images','bin/sound', 'bin/text'],
     install_requires = [
         'playsound',
         'matplotlib',
