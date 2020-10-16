@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
 
-from images.py import main
+from images import main
 
 main()
