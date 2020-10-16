@@ -22,7 +22,6 @@ setuptools.setup(
     scripts =['modules/images.py', 'modules/sound.py', 'modules/text.py'],
     install_requires = [
         'playsound',
-        'argparser',
         'matplotlib',
         'opencv-python',
         'time',
