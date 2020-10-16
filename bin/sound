@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
 
-from modules.sound import Presentador_de_sonido
+from sound import main
 
-Presentador_de_sonido()
+main()
