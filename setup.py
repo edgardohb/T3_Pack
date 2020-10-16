@@ -24,7 +24,6 @@ setuptools.setup(
         'playsound',
         'matplotlib',
         'opencv-python',
-        'time',
         'tabulate'
     ],
     python_requires='>=3',
