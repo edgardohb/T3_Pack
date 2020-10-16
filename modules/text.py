@@ -35,16 +35,16 @@ def text_analyzer(adress):
     g.write(tabulate(final_tab))
     g.close()   
 
+def main():
+    parser = argparse.ArgumentParser(description = 'Presenta una tabla de cantidades de palabras ')
+    parser.add_argument('texto', type = str , metavar = '', help = 'Ingrese el Nombre del archivo de texto')
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('-t','--time',action= 'store_true',help= 'Muestra tiempo de ejecución')
+    args = parser.parse_args()
 
-parser = argparse.ArgumentParser(description = 'Presenta una tabla de cantidades de palabras ')
-parser.add_argument('texto', type = str , metavar = '', help = 'Ingrese el Nombre del archivo de texto')
-group = parser.add_mutually_exclusive_group()
-group.add_argument('-t','--time',action= 'store_true',help= 'Muestra tiempo de ejecución')
-args = parser.parse_args()
+    t0= time.time()   
+    text_analyzer(args.texto)
+    t1= time.time() - t0
 
-t0= time.time()   
-text_analyzer(args.texto)
-t1= time.time() - t0
-
-if args.time:
-    print ('Tiempo de ejecución: ', round(t1,6), 'segundos.')
+    if args.time:
+        print ('Tiempo de ejecución: ', round(t1,6), 'segundos.')
