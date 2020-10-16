@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 # Se deben instalar las librería, ya que estas no la traen
 # se pueden instalr con los comandos: "pip install opencv-python" en phyton 2
 # o "pip3 install opencv-python" Phyton 3
