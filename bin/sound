@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
 
-from sound import main
+from modules.sound import main
 
 main()
