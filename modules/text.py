@@ -1,3 +1,4 @@
+
 # Importa la librería tabulate para generar la tabla de palabras y frecuencia
 from tabulate import tabulate
 import argparse
@@ -36,10 +37,10 @@ def text_analyzer(adress):
     g.close()   
 
 def main():
-    parser = argparse.ArgumentParser(description = 'Presenta una tabla de cantidades de palabras ')
-    parser.add_argument('texto', type = str , metavar = '', help = 'Ingrese el Nombre del archivo de texto')
+    parser = argparse.ArgumentParser(description = 'Funcion que genera una tabla la cual indica cuantas veces se presenta una palabra de un archivo de texto. Las palabras deben de estar separadas por un _ y no se pueden presentar cambios de linea para que el metodo funcione correctamente.')
+    parser.add_argument('texto', type = str , metavar = '', help = 'Nombre del archivo de texto. No es necesario escribir la extension .txt del archivo')
     group = parser.add_mutually_exclusive_group()
-    group.add_argument('-t','--time',action= 'store_true',help= 'Muestra tiempo de ejecución')
+    group.add_argument('-t','--time',action= 'store_true',help= 'Muestra tiempo de ejecución del programa')
     args = parser.parse_args()
 
     t0= time.time()   

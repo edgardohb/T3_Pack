@@ -1,3 +1,4 @@
+
 #requiere librerías que no vienen instaladas
 #para intalarlas se utilizan los siguientes comandos:
 #pip install playsound
@@ -25,11 +26,11 @@ def Presentador_de_sonido(archivo, reproducciones):
 #Presentador_de_sonido(r"C:\Users\edghb\Downloads\cintas-de-prueba-_1",1)
 
 def main(): 
-    parser = argparse.ArgumentParser(description = 'Reproduce un audio')
-    parser.add_argument('veces', type = int, help = 'Ingrese un entero del rango de Veces [1 - 10] que desea escuchar el audio')
-    parser.add_argument('archivo', type = str, help = 'Ingrese el Nombre del audio')
+    parser = argparse.ArgumentParser(description = 'Esta funcion reproduce un audio en formato mp3. El usuario elige el archivo de audio que desea escuchar y cuantas veces desea escucharlo')
+    parser.add_argument('veces', type = int, help = 'Cantidad de veces que el usuario desea escuchar el audio. La cantidad minima de veces disponible es 1 y la maxima es 10')
+    parser.add_argument('archivo', type = str, help = 'Nombre del archivo de audio que se desea escuchar. No es necesario que el usuario escriba la extension .mp3 del archivo')
     group = parser.add_mutually_exclusive_group()
-    group.add_argument('-t','--time',action= 'store_true',help= 'Muestra tiempo de ejecución')
+    group.add_argument('-t','--time',action= 'store_true',help= 'Muestra tiempo de ejecucion del programa')
     args = parser.parse_args()
 
     t0= time.time()

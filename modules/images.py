@@ -48,16 +48,14 @@ def Presentador_de_imágenes(archivo, escala):
         plt.imshow(cv2.cvtColor(im_resized, cv2.COLOR_BGR2RGB))
         plt.show()
 
-### Para probar con argparser poner esto como comentario
 
-#Presentador_de_imágenes(r"C:\Users\edghb\Pictures\Saved Pictures\space-walk-nasa-796x457",2)
-
+#M Argparser function
 def main():
-    parser = argparse.ArgumentParser(description = 'Presenta una imagen')
-    parser.add_argument('escala' , type = int, help = 'Ingrese un entero para la Escala 1: para escala 1:1, 2: para escala 1:2 , 3: para escala 2:1')
-    parser.add_argument('archivo', type = str, help = 'Ingrese el Nombre de la imagen')
+    parser = argparse.ArgumentParser(description = 'Esta funcion escala una imagen y la muestra, el usuario elige el archivo de imagen a escalar y la escala deseada')
+    parser.add_argument('escala' , type = int, help = 'Escala a utilizar para modificar la imagen. El usuario ingresa un numero del 1 al 3, a continuación se presentan las escalas disponibles y su respectivo numero: 1 para escala 1:1, 2 para escala 1:2, 3 para escala 2:1')
+    parser.add_argument('archivo', type = str, help = 'Nombre del archivo de la imagen que se desea escalar. No es necesario ingresar la extension .jpg del archivo')
     group = parser.add_mutually_exclusive_group()
-    group.add_argument('-t', '--time', action= 'store_true', help= 'Muestra tiempo de ejecución')
+    group.add_argument('-t', '--time', action= 'store_true', help= 'Muestra tiempo de ejecución del programa')
     args = parser.parse_args()
 
     t0= time.time()
@@ -65,4 +63,5 @@ def main():
     t1= time.time() - t0
 
     if args.time:
-        print ('Tiempo de ejecución: ', round(t1, 6), 'segundos.') 
+        print ('Tiempo de ejecución: ', round(t1, 6), 'segundos.')
+        
