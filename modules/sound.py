@@ -22,8 +22,6 @@ def Presentador_de_sonido(archivo, reproducciones):
         #reproduce el audio
         playsound(NOMBRE_ARCHIVO)
 
-### Para probar con argparser poner esto como comentario
-#Presentador_de_sonido(r"C:\Users\edghb\Downloads\cintas-de-prueba-_1",1)
 
 def main(): 
     parser = argparse.ArgumentParser(description = 'Esta funcion reproduce un audio en formato mp3. El usuario elige el archivo de audio que desea escuchar y cuantas veces desea escucharlo')
