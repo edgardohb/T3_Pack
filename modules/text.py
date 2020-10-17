@@ -38,7 +38,7 @@ def text_analyzer(adress):
 
 def main():
     parser = argparse.ArgumentParser(description = 'Funcion que genera una tabla la cual indica cuantas veces se presenta una palabra de un archivo de texto. Las palabras deben de estar separadas por un _ y no se pueden presentar cambios de linea para que el metodo funcione correctamente.')
-    parser.add_argument('texto', type = str , metavar = '', help = 'Nombre del archivo de texto. No es necesario escribir la extension .txt del archivo')
+    parser.add_argument('texto', type = str , metavar = '', help = 'Nombre del archivo de texto. Es necesario escribir la extension .txt del archivo')
     group = parser.add_mutually_exclusive_group()
     group.add_argument('-t','--time',action= 'store_true',help= 'Muestra tiempo de ejecución del programa')
     args = parser.parse_args()
